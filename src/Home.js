@@ -25,6 +25,20 @@ function Home(props) {
         }
       ]
     
+    let projects = [
+        {
+            title: "Dungeon of Doom",
+            description:"'Welcome intrepid adventurer. Turns out you're not very good at this and have managed to trap yourself in a room that is slowly growing smaller...ancient earth temples and all that. Happily, you thought to bring your handy laser gun. Blast the blocks in front of the door to escape certain doom. Or you know...don't. Good luck!'",
+            link: "https://github.com/CCLancaster/Dungeon-of-Doom",
+            img: "src/DoD.png"
+        },
+        {
+            title: "Sanity",
+            description: "Made for overwhelmed and stressed out bootcamp students, before you is a web app specifically designed with your sanity in mind. Take a break with a random selection of horrendously delightful dad jokes. Dive into a guided block breathing session, or add positive affirmations for those really bad days to come. Either way, sign in and zen out.",
+            link: "https://github.com/CCLancaster/sanity",
+            img: "src/sanity-home.png"
+        }
+    ]
     return (
         <Router>
             <div>
@@ -37,7 +51,7 @@ function Home(props) {
                     | <Link to="/projects">Projects</Link>
                     <Route path="/blog" render={() => <Blog posts={posts} />} />
                     <Route path="/about" render={() => <About />} />
-                    <Route path="/projects" render={() => <Projects />} />
+                    <Route path="/projects" render={() => <Projects projects={projects} />} />
             </nav>
             
         </Router>
